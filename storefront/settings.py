@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    # 'django.contrib.sessions', # apprently, old method for api, no need session to manage user
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
