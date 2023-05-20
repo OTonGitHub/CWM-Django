@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     # 'django.contrib.sessions', # apprently, old method for api, no need session to manage user
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', # CSS, images etc.
 ]
 
 MIDDLEWARE = [
