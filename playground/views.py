@@ -7,5 +7,7 @@ def say_hello(request):
         # transform data,
         # send email, etc.
     # return HttpResponse("Hello World")
+    # x = 1 # debugging, bp
+    # y = 1
     return render(request, 'hello.html', {"name": "OT"}) # returns HttpResponseObject
         # render: HttpRequst, Template, str Dictionary
