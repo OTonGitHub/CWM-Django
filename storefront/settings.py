@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # 'django.contrib.sessions', # apprently, old method for api, no need session to manage user
     'django.contrib.messages',
     'django.contrib.staticfiles', # CSS, images etc.
+    'playground' # register app in startproject(storefront)/settings.py
 ]
 
 MIDDLEWARE = [
