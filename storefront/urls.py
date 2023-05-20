@@ -19,6 +19,7 @@ from django.urls import path, include # add include, according to documentation 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("playground/", include("playground.urls")) # any urls start with playgrond/ route fro playground app
+    path("playground/", include("playground.urls")), # any urls start with playgrond/ route fro playground app
         # will chop playground/ from here and pass to URLConf included, so no need to include playground/ in that file for now
+    path("__debug__/", include("debug_toolbar.urls"))
 ]

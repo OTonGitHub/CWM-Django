@@ -37,10 +37,15 @@ INSTALLED_APPS = [
     # 'django.contrib.sessions', # apprently, old method for api, no need session to manage user
     'django.contrib.messages',
     'django.contrib.staticfiles', # CSS, images etc.
-    'playground' # register app in startproject(storefront)/settings.py
+    'playground', # register app in startproject(storefront)/settings.py
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware", 
+        # hook into request response processing
+        # early as possible but after encoding, like GZipMiddleware
+        # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +53,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
 ]
 
 ROOT_URLCONF = 'storefront.urls'
