@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def say_hello(request):
+    # example things to do here:
+        # pull data from db,
+        # transform data,
+        # send email, etc.
+    return HttpResponse("Hello World")
