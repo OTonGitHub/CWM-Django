@@ -6,4 +6,5 @@ def say_hello(request):
         # pull data from db,
         # transform data,
         # send email, etc.
-    return HttpResponse("Hello World")
+    # return HttpResponse("Hello World")
+    return render(request, 'hello.html') # returns HttpResponseObject
